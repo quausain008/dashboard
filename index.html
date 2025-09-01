@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!--left side tab -->
+        <aside>
+            <!--top(logo)-->
+            <div class="top">
+                <div class="logo">
+                    <h2><span class="dan">Kaksha.live</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                        <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+            <!--sidebar-->
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">groups</span>
+                    <h3>Attendance</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">insights</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">mail_outline</span>
+                    <h3>Messages</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined"> settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">report_gmailerrorred</span>
+                    <h3>Report</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+                
+            </div>
+
+        </aside>
+        <!--main section -->
+        <main>
+            <div class="dash">
+                <div class="menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+                <h1>DASHBOARD</h1>
+            </div>
+            <div class="student">
+                <h4>student name</h4>
+            </div>
+            <div class="insights">
+                <!--present start-->
+                <div class="present">
+                    <span class="material-symbols-outlined">person</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>PRESENT </h3>
+                            <h1>23/25</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">60%</div>
+                        </div>
+                    </div>
+                    <small>THIS MONTH</small>
+                </div>
+                <!--end present-->
+
+                <!--absent start-->
+                <div class="absent">
+                    <span class="material-symbols-outlined">person_off</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>ABSENT </h3>
+                            <h1>2/25</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">40%</div>
+                        </div>
+                    </div>
+                    <small>THIS MONTH</small>
+                </div>
+                <!--end absent-->
+
+                <!--overall start-->
+                <div class="overall">
+                    <span class="material-symbols-outlined">person_celebrate</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Overall Attendance</h3>
+                            <h1>72/85</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">60%</div>
+                        </div>
+                    </div>
+                    <small>THIS YEAR</small>
+                </div>
+                <!--end overall-->
+            </div>
+            <div class="calender">
+                 <h2>Attendance Calendar</h2>
+                 <div id="calendar">
+
+                 </div>
+            </div>
+        </main>
+    </div>
+    <script src="first.js"></script>
+</body>
+</html>

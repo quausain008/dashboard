@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --clr-primary: #0341c6;
+  --clr-dan: rgb(3, 77, 196);
+  --clr-present: rgba(113, 248, 68, 0.851);;
+  --clr-white: #fff;
+  --clr-info-dark: #333f83;
+  --clr-info-light: #dce1eb;
+  --clr-dark: #0b4ad1;
+  --clr-absent:  rgb(253, 45, 45);
+  --clr-light: rgba(132, 139, 200, 0.18);
+  --clr-primary-variant: #163f65;
+  --clr-dark-variant: #213167;
+  --clr-color-background: #f6f6f9;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--clr-light);
+
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--clr-color-background);
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 14rem auto ;
+    width: 96%;
+    gap: 1.8rem;
+    margin: 0 auto;
+}
+a{
+    color: var(--clr-dark);
+}
+.profile{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.text-muted{
+    color: var(--clr-info-dark);
+}
+p{
+    color: var(--clr-dark-variant);
+}
+b{
+    color: var(--clr-dark);
+}
+.primary{
+    color: var(--clr-primary);
+}
+.success{
+    color: var(--clr-present);
+}
+.dan{
+    color: var(--clr-dan);
+}
+.warning{
+    color: var(--clr-absent);
+}
+.menu{
+    display: none;
+}
+.close{
+    display: none;
+}
+/* aside*/
+aside{
+    height: 100vh;
+}
+aside .top{
+    background-color: var(--clr-white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.4rem;
+}
+aside .logo{
+    display: flex;
+    gap: 1rem;
+}
+
+/*sidebar*/
+aside .sidebar{
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    top: 1rem;
+}
+aside .sidebar a{
+    display: flex;
+    color: var(--clr-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    height: 3.2rem;
+    transition: all .1s ease-in;
+}
+aside .sidebar h3{
+    font-size: 1rem;
+}
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all .1s ease-in;
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+aside .sidebar a.active{
+    background-color: var(--clr-info-light);
+    margin-left: 0rem;
+    color: var(--clr-primary);
+    border-left: .3rem solid var(--clr-primary);
+}
+aside .sidebar a.active::before{
+    contain: '';
+    width: 6px;
+    height: 100%;
+    background-color: var(--clr-primary);
+}
+aside .sidebar a:hover{
+    color: var(--clr-primary);
+}
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+    transition: .4s ease;   
+}
+/*****main body*****/
+main{
+    margin-top: 1.5rem;
+    width: auto;
+}
+main input{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: var(--clr-dark);
+}
+main .date{
+    display: inline-block;
+    background-color: var(--clr-white);
+    border-radius: var(--border-radius-1);
+    margin-top: 1rem;
+    padding: 0.5rem , 1rem;
+}
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.6rem;
+}
+main .insights>div{
+    background-color: var(--clr-white);
+    padding: var(--card-padding);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all .3s ease;
+    gap: 3rem;
+}
+main .insights>div:hover{
+    box-shadow: none;
+}
+
+main .insights>div span{
+    background-color:var(--clr-present);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--clr-white);
+    font-size: 2rem;
+}
+main .insights>div.absent span{
+    background-color:var(--clr-absent);
+}
+main .insights>div.overall span{
+    background-color: #7380ec;
+}
+main .insights>div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .insights>div .middle h1{
+    font-size: 1.6rem;
+}
+main h1{
+    color: var(--clr-dark);
+}
+main .insights h1, h3, p{
+    color: var(--clr-dark);
+}
+main .insights .progress{
+    position: relative;
+    height: 68px;
+    width: 68px;
+    border-radius: 50px;
+}
+main .insights svg{
+    height: 150px;
+    position: absolute;
+    top:0;
+}
+main .insights svg circle{
+    fill:none;
+    stroke: var(--clr-primary);
+    transform: rotate(270,80,80);
+    stroke-width: 5 ;
+}
+main .insights .present svg circle{
+    stroke-dashoffset: 10;
+    stroke-dasharray: 150;
+    stroke:var(--clr-present);
+}
+main .insights .absent svg circle{
+    stroke-dashoffset: 90;
+    stroke-dasharray: 150;
+    stroke:var(--clr-absent);
+}
+main .insights .overall svg circle{
+    stroke-dashoffset: 10;
+    stroke-dasharray: 150;
+    stroke:rgb(143, 44, 224);
+}
+main .insights .progress .number{
+    position: absolute;
+    top:10%;
+    left: 10%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Calendar styling */
+.calender {
+    margin-top: 2rem;
+    background: var(--clr-white);
+    padding: 1rem;
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    overflow-x: auto;
+}
+.calendar-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid var(--clr-dark-variant);
+    text-align: center;
+}
+.calendar-table th, .calendar-table td {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid var(--clr-dark-variant);
+    border-radius: 3rem;
+}
+.calendar-table th{
+    color: var(--clr-dark);
+}
+.calender h2{
+    color: var(--clr-dark);
+}
+.calendar-day.present {
+    background: var(--clr-present);
+    color: white;
+    border-radius: 0;
+}
+.calendar-day.absent {
+    background: var(--clr-absent);
+    color: white;
+    border-radius: 0;
+}
+/*********** screen tab*************/
+@media screen and (max-width:1200px) {
+    .container{
+        width: 94%;
+        grid-template-columns: 4rem auto;
+    }
+    aside .sidebar h3{
+        display: none;
+    }
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+    main .insights{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/*********** phone screen **************/
+@media screen and (max-width:768px) {
+    .main-container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    aside {
+        position: absolute;
+        width: 18rem;
+        z-index: 3;
+        background: var(--clr-white);
+        display: none;
+    }
+    aside .logo h2{
+        display: inline;
+    }
+    aside .sidebar h3{
+        display: inline;
+    }
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+    aside .top div.close{
+        display: inline;
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
+        font-size: 35px;
+    }
+    .menu{
+        display: inline;
+        margin-left: 2px;
+        margin-top: 1px;
+        color: var(--clr-dark-variant);
+        background-color: transparent;
+        margin-right: 10px;
+    }
+
+    
+}
